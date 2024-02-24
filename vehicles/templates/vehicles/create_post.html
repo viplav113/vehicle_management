@@ -1,0 +1,17 @@
+{% extends 'vehicles/base.html' %}
+{% block title %}Create a Vehicle Info{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container">
+  <h2>Create Vehicle Information</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.vehicle_number|as_crispy_field }}
+    {{ form.vehicle_type|as_crispy_field }}
+    {{ form.dc_number|as_crispy_field }}
+    {{ form.po_number|as_crispy_field }}
+    
+    <button type="submit" class="btn btn-success mt-3">Create Vehicle Info</button>
+  </form>
+</div>
+{% endblock %}

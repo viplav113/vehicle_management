@@ -1,0 +1,10 @@
+<div class="container">
+  <h2>Checkout Vehicle</h2>
+  <p><strong>Vehicle Number:</strong> {{ vehicle.vehicle_number }}</p>
+  <!-- Add other vehicle details as needed -->
+
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-success mt-3">Confirm Checkout</button>
+  </form>
+</div>

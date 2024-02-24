@@ -1,0 +1,16 @@
+{% extends 'vehicles/base.html' %}
+{% block title %}Add Vendor{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container">
+  <h2>Add Vendor</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.name|as_crispy_field }}
+    {{ form.company_name|as_crispy_field }}
+    {{ form.po_number|as_crispy_field }}
+
+    <button type="submit" class="btn btn-success mt-3">Add Vendor</button>
+  </form>
+</div>
+{% endblock %}

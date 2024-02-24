@@ -1,0 +1,10 @@
+{% extends 'vehicles/base.html' %}
+{% block title %}Product Information{% endblock %}
+{% block content %}
+<div class="container">
+  <h2>Product Information</h2>
+  <p><strong>Name:</strong> {{ product.name }}</p>
+  <p><strong>Quantity:</strong> {{ product.quantity }}</p>
+  <!-- Add other product details as needed -->
+</div>
+{% endblock %}

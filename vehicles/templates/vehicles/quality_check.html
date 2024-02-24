@@ -1,0 +1,14 @@
+<!-- quality_check.html -->
+{% extends 'vehicles/base.html' %}
+{% block title %}Quality Check{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container">
+        <h2>Quality Check for {{ vehicle.vehicle_number }}</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ quality_check_form|crispy }}
+            <button type="submit" class="btn btn-success mt-3">Save Quality Check</button>
+        </form>
+    </div>
+{% endblock %}
