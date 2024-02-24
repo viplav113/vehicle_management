@@ -1,7 +1,7 @@
 aiohttp
 crispy-bootstrap5
 cssselect2
-Django==5.0.2
+Django==3.2.10
 django-crispy-forms
 django-material
 django-widget-tweaks
